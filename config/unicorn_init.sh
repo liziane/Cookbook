@@ -5,7 +5,7 @@ TIMEOUT=${TIMEOUT-60}
 APP_NAME=cookbook
 APP_ROOT=/home/pico/apps/cookbook/current
 PID=$APP_ROOT/tmp/pids/unicorn.pid
-CMD="cd $APP_ROOT && bin/unicorn -c $APP_ROOT/config/unicorn.rb -E production -D"
+CMD="cd $APP_ROOT && unicorn -c $APP_ROOT/config/unicorn.rb -E production -D"
 USER=pico
 action="$1"
 set -u
