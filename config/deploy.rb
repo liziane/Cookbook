@@ -9,6 +9,9 @@ set :ssh_options, { forward_agent: true }
 set :bundle_flags, "--deployment --quiet --binstubs"
 set :deploy_via, :remote_cache
 server ENV["SERVER"], :web, :app, :db, primary: true
+set :default_environment, {
+  'PATH' => "$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
+}
 
 set :branch do
   default_tag = `git tag`.split("\n").last
