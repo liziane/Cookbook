@@ -13,6 +13,8 @@ gem 'spring',        group: :development
 gem 'unicorn'
 gem 'capistrano', '~> 2.15.0', group: :development
 gem 'net-ssh', '2.7.0'
+gem 'omniauth-facebook'
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
 end
