@@ -48,10 +48,8 @@
         <a class="navbar-brand" href="#">Cookbook</a>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
-            <li><%= link_to "home", "/path1"  %></li>
-            <li><%= link_to "feed", "/path2"  %></li>
-            <li><%= link_to "my cookbooks", "/path2"  %></li>
-            <li><%= link_to "account", "/path3"  %></li>
+            <li><%= link_to "Home", "/path1"  %></li>
+            <li><%= link_to "Explore", "/path2"  %></li>
           </ul>
         </div>
       </div>
@@ -59,20 +57,34 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-lg-9">
+        <div class="col-lg-3">
           <%= bootstrap_flash %>
           <%= yield %>
         </div>
-        <div class="col-lg-3">
-          <div class="well sidebar-nav">
-            <h3>News</h3>
-            <ul class="nav nav-list">
-              <li><%= link_to "Alien added new cookbook", "/path1"  %></li>
-              <li><%= link_to "Ma just commented on your boiled egg", "/path2"  %></li>
-            </ul>
-          </div><!--/.well -->
-        </div><!--/span-->
-      </div><!--/row-->
+        <div class="col-lg-8">
+          <ul class="nav nav-tabs">
+          <li role="presentation" class="active"><a href="#">Cookbooks</a></li>
+          <li role="presentation"><a href="#">Favorites</a></li>
+          </ul>
+          <form class="form-inline pull-right">
+            <div class="form-group">
+              <input type="text" class="form-control" id="cookbookName" placeholder="name your cookbook">
+
+            <button type="submit" class="btn btn-primary">Create</button></div>
+          </form>
+          <table class="table table-hover table-bordered">
+            <caption>All your recipe collections are displayed here</caption>
+            <tbody>
+              <tr><td>All Time Favorites</td></tr>
+              <tr><td>Light Dinners</td></tr>
+              <tr><td>Picnic Ideas</td></tr>
+              <tr><td>Classic Desserts</td></tr>
+              <tr><td>Brazilian Menu</td></tr>
+            </tbody>
+            </table>
+        </div><!--/col-lg-8-->
+
+        </div><!--/row-->
 
       <footer>
         <p>&copy; LCC LizCatCompany 2014</p>

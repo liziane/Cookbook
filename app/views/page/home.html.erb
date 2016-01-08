@@ -1,3 +1,4 @@
+<img src="https://s-media-cache-ak0.pinimg.com/originals/73/72/0f/73720f7444b104b618b623a121cf79f2.jpg" class="img-thumbnail">
 <div id="user_nav">
   <% if current_user %>
     Signed in as <strong><%= current_user.name %></strong>!
@@ -6,5 +7,8 @@
     <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
   <% end %>
 </div>
-<img src="http://cdn2.scratch.mit.edu/get_image/user/2486082_60x60.png" >
-
+<ul class="nav nav-pills nav-stacked">
+  <li role="presentation" class="active"><a href="#">Profile</a></li>
+  <li role="presentation"><a href="/messages">Messages</a></li>
+  <li role="presentation"><a href="#">Settings</a></li>
+</ul>
